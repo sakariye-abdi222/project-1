@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a table at Burger House. Choose a date, time and party size.">
+    <title>Reservations | Burger House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Bebas+Neue&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="logo" href="index.html">
+          <img src="assets/logo-white.png" width="409" height="90" alt="Burger House home">
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="reservation.html" aria-current="page">Reservations</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-intro">
+        <div class="wrap">
+          <p class="eyebrow">Reservation</p>
+          <h1>Book your table</h1>
+          <p>Tell us when you are coming and we will find you a seat.</p>
+        </div>
+      </header>
+
+      <section class="section reservation" aria-labelledby="form-title">
+        <div class="wrap reservation__inner">
+          <img class="reservation__deco" src="assets/reservation-bg-1.png" width="315" height="382" alt="">
+
+          <form class="booking" action="/reservations" method="post">
+            <h2 class="section-title section-title--center" id="form-title">Reserve a table</h2>
+            <div class="booking__fields">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" required>
+              </div>
+              <div class="field">
+                <label for="time">Time</label>
+                <input id="time" name="time" type="time" required>
+              </div>
+              <div class="field">
+                <label for="people">Number of people</label>
+                <input id="people" name="people" type="number" min="1" max="20" value="2" required>
+              </div>
+              <div class="field field--full">
+                <label for="notes">Special requests (optional)</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+              </div>
+            </div>
+            <button class="btn" type="submit">Find a table</button>
+            <p class="booking__note">For groups larger than 20, please email info@burgerhouse.com.</p>
+          </form>
+
+          <img class="reservation__deco" src="assets/reservation-bg-2.png" width="316" height="582" alt="">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__grid">
+        <div>
+          <img class="site-footer__logo" src="assets/logo-white.png" width="409" height="90" alt="Burger House">
+          <p class="site-footer__about">
+            Welcome to Burger House, where passion for exceptional food and genuine hospitality come together. From the finest ingredients to every bite, we are dedicated to the perfect burger.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Visit us</h2>
+          <ul class="contact-list">
+            <li><span>Address</span> MG Road, Bangalore, 500089</li>
+            <li><span>Email</span> <a href="mailto:info@burgerhouse.com">info@burgerhouse.com</a></li>
+          </ul>
+          <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">X</a>
+            <a href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <p class="site-footer__bar">&copy; 2026 Burger House. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
